@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Sheikh Shadman Sadi — Junior Accountant, Audit Associate at Alam M. Zaman & Co., Chartered Accountants.">
+  <title>Sheikh Shadman Sadi | Accounts & Audit</title>
+  <style>
+    :root{
+      --navy:#0b1730; --navy2:#12264b; --gold:#c9a45c; --cream:#f7f4ee;
+      --white:#fff; --text:#253047; --muted:#687286; --line:#e7e2d8;
+      --shadow:0 20px 60px rgba(11,23,48,.12); --radius:22px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(11,23,48,.94);backdrop-filter:blur(12px)}
+    .nav-inner{height:74px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.08em;color:#fff}
+    .brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:28px;color:#dbe2ef;font-size:14px}
+    .nav-links a:hover{color:var(--gold)}
+    .hero{min-height:100vh;padding:150px 0 90px;background:
+      radial-gradient(circle at 85% 20%,rgba(201,164,92,.20),transparent 30%),
+      linear-gradient(135deg,var(--navy),#162e59 65%,#0d1c38);color:#fff;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:70px;align-items:center}
+    .eyebrow{color:var(--gold);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin-bottom:16px}
+    h1{font-size:clamp(46px,7vw,82px);line-height:1.02;letter-spacing:-.045em;margin-bottom:22px}
+    .hero h1 span{color:var(--gold)}
+    .lead{font-size:19px;color:#d9e0ec;max-width:680px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .btn{padding:13px 20px;border-radius:999px;font-weight:750;font-size:14px;transition:.2s}
+    .btn-gold{background:var(--gold);color:var(--navy)}
+    .btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff}
+    .btn-whatsapp{background:#25D366;color:#fff}
+    .btn:hover{transform:translateY(-2px)}
+    .profile-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:28px;padding:28px;box-shadow:var(--shadow);text-align:center}
+    .profile-img{width:160px;height:160px;border-radius:50%;margin:0 auto 22px;border:3px solid var(--gold);object-fit:cover;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    .profile-card h3{font-size:20px}
+    .profile-card p{color:#c9d2e1;font-size:14px;margin-top:5px}
+    .mini{margin-top:24px;border-top:1px solid rgba(255,255,255,.15);padding-top:18px;font-size:13px;color:#d8dfeb;text-align:left}
+    section{padding:100px 0}
+    .section-head{max-width:700px;margin-bottom:42px}
+    .section-head .eyebrow{margin-bottom:9px}
+    h2{font-size:42px;line-height:1.12;color:var(--navy);letter-spacing:-.03em}
+    .cream{background:var(--cream)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+    .about-copy{font-size:17px;color:#566176}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .fact{padding:22px;background:#fff;border:1px solid var(--line);border-radius:18px}
+    .fact strong{display:block;color:var(--navy);font-size:14px;margin-bottom:5px}
+    .fact span{font-size:14px;color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{padding:30px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);transition:.25s}
+    .service:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#d6c29a}
+    .icon{width:48px;height:48px;border-radius:14px;background:#f1eadc;color:var(--gold);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+    .service h3{color:var(--navy);margin-bottom:8px;font-size:18px}
+    .service p{font-size:14px;color:var(--muted)}
+    .experience{display:grid;grid-template-columns:160px 1fr;gap:35px;padding:32px 0;border-bottom:1px solid var(--line)}
+    .experience:last-child{border-bottom:0}
+    .date{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.08em;text-transform:uppercase}
+    .experience h3{color:var(--navy);font-size:22px}
+    .company{font-weight:700;color:#6c5a37;margin:4px 0 12px}
+    .experience ul{padding-left:19px;color:#5d687b}
+    .contact{background:var(--navy);color:#fff}
+    .contact h2{color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+    .contact p{color:#cbd4e2}
+    .contact-list{margin-top:25px;display:grid;gap:13px}
+    .contact-item{padding:17px 20px;border:1px solid rgba(255,255,255,.14);border-radius:16px;color:#e4e9f1;display:block;transition:.2s}
+    .contact-item:hover{border-color:var(--gold);background:rgba(255,255,255,.05)}
+    .contact-item b{display:block;color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+    .qr-box{background:#fff;color:var(--navy);border-radius:22px;padding:30px;text-align:center;align-self:start}
+    .qr-placeholder{width:180px;height:180px;margin:0 auto 16px;border:10px solid #fff;outline:2px solid #111;display:grid;place-items:center;font-weight:900;font-size:22px;background:repeating-conic-gradient(#111 0 25%,#fff 0 50%) 50%/20px 20px}
+    footer{background:#081126;color:#aeb9c9;padding:25px 0;text-align:center;font-size:13px}
+    @media(max-width:800px){
+      .nav-links{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .services{grid-template-columns:1fr 1fr}.profile-card{max-width:430px;margin:auto}
+      .experience{grid-template-columns:1fr;gap:8px}
+    }
+    @media(max-width:520px){section{padding:75px 0}.services,.facts{grid-template-columns:1fr}h2{font-size:34px}.hero{padding-top:120px}.lead{font-size:17px}}
+  </style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="brand" href="#home">S<span>S</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Accounts • Audit • Professional Services</div>
+      <h1>Sheikh Shadman <span>Sadi</span></h1>
+      <p class="lead">Junior Accountant, Audit Associate at Alam M. Zaman & Co., Chartered Accountants. Focused on accounting, audit support, financial reporting and professional working-paper preparation.</p>
+      <div class="buttons">
+        <a class="btn btn-gold" href="#contact">Get in touch</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/8801879499385" target="_blank">WhatsApp Direct</a>
+        <a class="btn btn-outline" href="#services">View services</a>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img src="sadi.jpg" alt="Sheikh Shadman Sadi" class="profile-img">
+      <h3>Junior Accountant, Audit Associate</h3>
+      <p>Alam M. Zaman & Co., Chartered Accountants</p>
+      <div class="mini">Professional focus: Accounts preparation, audit procedures, working papers, financial statements and compliance support.</div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="cream">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Profile</div>
+      <h2>Reliable accounting and audit support, with a professional approach.</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-copy">I work across accounting and audit assignments, helping prepare financial information, organize supporting documents, develop audit working papers and support the audit process. My approach is structured, detail-oriented and focused on clear documentation.</p>
+      <div class="facts">
+        <div class="fact"><strong>Core area</strong><span>Accounts & Audit</span></div>
+        <div class="fact"><strong>Professional role</strong><span>Junior Accountant, Audit Associate</span></div>
+        <div class="fact"><strong>Firm</strong><span>Alam M. Zaman & Co.</span></div>
+        <div class="fact"><strong>Coverage</strong><span>Dhaka & Chattogram</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">What I do</div>
+      <h2>Accounting & audit services</h2>
+    </div>
+    <div class="services">
+      <article class="service"><div class="icon">₿</div><h3>Accounting & Bookkeeping</h3><p>Ledger maintenance, transaction recording, reconciliations and accounting support.</p></article>
+      <article class="service"><div class="icon">✓</div><h3>Audit Support</h3><p>Audit procedures, evidence organization, substantive testing and documentation support.</p></article>
+      <article class="service"><div class="icon">▤</div><h3>Financial Statements</h3><p>Support in preparing and organizing financial statements and related schedules.</p></article>
+      <article class="service"><div class="icon">⌁</div><h3>Working Papers</h3><p>Professional working-paper preparation, lead schedules and audit documentation.</p></article>
+      <article class="service"><div class="icon">◇</div><h3>Tax & VAT Support</h3><p>Assistance with tax, VAT and compliance-related accounting documentation.</p></article>
+      <article class="service"><div class="icon">◎</div><h3>Financial Analysis</h3><p>Account analysis, variance review and clear presentation of financial information.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="cream">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Professional experience</div>
+      <h2>Experience built around accuracy and documentation.</h2>
+    </div>
+    <div class="experience">
+      <div class="date">Current</div>
+      <div>
+        <h3>Junior Accountant, Audit Associate</h3>
+        <div class="company">Alam M. Zaman & Co., Chartered Accountants</div>
+        <ul>
+          <li>Prepare and review accounting records and supporting schedules.</li>
+          <li>Assist with audit planning, testing and documentation.</li>
+          <li>Prepare audit working papers and organize client evidence.</li>
+          <li>Support financial statement preparation and compliance work.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Let’s connect professionally.</h2>
+      <p style="margin-top:18px">For accounting, audit and related professional discussions, feel free to get in touch.</p>
+      <div class="contact-list">
+        <a class="contact-item" href="tel:+8801879499385"><b>Mobile</b>+880 1879 499 385</a>
+        <a class="contact-item" href="https://wa.me/8801879499385" target="_blank"><b>WhatsApp</b>+880 1879 499 385 (Direct Chat)</a>
+        <a class="contact-item" href="mailto:sksadi6251@gmail.com"><b>Email</b>sksadi6251@gmail.com</a>
+        <div class="contact-item"><b>Dhaka Office</b>House No. 23 (3rd Floor), Road No. 6/A, Sector No. 5, Uttara, Dhaka-1230</div>
+        <div class="contact-item"><b>Chattogram Office</b>Joy Bangla Tower (Lift-15), 36 Agrabad C/A, Chattogram</div>
+      </div>
+    </div>
+    <div class="qr-box">
+      <div class="qr-placeholder">QR</div>
+      <h3>Scan to save contact</h3>
+      <p style="font-size:13px;color:#687286;margin-top:6px">Replace this placeholder with your vCard QR code before publishing.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Sheikh Shadman Sadi · Accounts & Audit
+</footer>
+</body>
+</html>
